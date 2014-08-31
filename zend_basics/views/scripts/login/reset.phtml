@@ -1,0 +1,17 @@
+<form id="<?=$this->form->getId()?>" name="<?=$this->form->getName()?>" enctype="<?=$this->form->getEnctype()?>" method="<?=$this->form->getMethod()?>" action="<?=$this->form->getAction()?>">
+	<legend>Reset password</legend>
+	<table>
+		<tr>
+			<td><div class="form-group"><?=$this->form->email?></div></td>
+		</tr>
+<?if ($this->form->ReCaptcha) {?>
+		<tr>
+			<td><div class="form-group"><?=$this->form->ReCaptcha?></div></td>
+		</tr>
+<? } ?>
+		<tr>
+			<td><div class="form-group"><?=$this->form->Reset?></div></td>
+		</tr>
+	</table>
+</form>
+

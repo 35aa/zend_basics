@@ -1,0 +1,27 @@
+<form id="<?=$this->form->getId()?>" name="<?=$this->form->getName()?>" enctype="<?=$this->form->getEnctype()?>" method="<?=$this->form->getMethod()?>" action="<?=$this->form->getAction()?>">
+	<legend>Log in</legend>
+	<table>
+<?if ($this->__isset('error') && $this->error) {?>
+		<tr>
+			<td><p class="alert alert-danger form-alert">Credentials You used is not valid</p></td>
+		</tr>
+<? } ?>
+		<tr>
+			<td><div class="form-group"><?=$this->form->email?></div></td>
+		</tr>
+		<tr>
+			<td><div class="form-group"><?=$this->form->password?></div></td>
+		</tr>
+<?if ($this->form->ReCaptcha) {?>
+		<tr>
+			<td><div class="form-group"><?=$this->form->ReCaptcha?></div></td>
+		</tr>
+<? } ?>
+		<tr>
+			<td><div class="form-group"><?=$this->form->Login?></div></td>
+		</tr>
+	</table>
+</form>
+
+<p style="padding-top:20px">If you forgot your password, <a href="/login/reset">reset it.</a></p>
+

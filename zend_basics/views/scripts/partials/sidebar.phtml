@@ -1,0 +1,16 @@
+<?
+if ($this->__isset('isAuthenticated') && $this->isAuthenticated) {
+?>
+<div id="sidebar" class="well col-md-2" style="max-width: 340px; padding: 8px 0;">
+	<!--Sidebar content-->
+	<ul class="nav nav-pills nav-stacked">
+		<li class="navbar-brand">Navigation</li>
+		<li <?=$this->controller == 'home' ? 'class="active"' : ''?>><a href="/"><i class="icon-home"></i>Home</a></li>
+		<li class="divider"></li>
+		<li>
+			<a href="/logout"><i class="icon-off"></i>Log out</a>
+		</li>
+	</ul>
+</div>
+<?}?>
+
